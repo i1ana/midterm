@@ -1,13 +1,39 @@
-/*MAIN CSS FOR MIDTERM */
 
+
+.body {
+	font-family: 'Roboto' sans-serif; 
+	color: black;
+}
 
 .red {
 	background-color: red;
 }
 
 .yellow {
-	background-color: yellow; 
+	background-color: #ffc107; 
 }
+
+
+/*NAVBAR */
+
+.navbar {
+	background-color: #ffc107; 
+}
+
+.brand {
+	font-size: 22px; 
+	font-weight: bold; 
+}
+
+/* THUMBNAILS */
+
+.thumbnails {
+	width: 13%;
+	height: 13%;
+
+
+}
+
 
 /*FOOTER*/ 
 
@@ -40,7 +66,7 @@
 
 .footer-distributed h3{
 	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
+	font-size: 36px; 
 	margin: 0;
 }
 
