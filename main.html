@@ -1,17 +1,22 @@
 <!-- Midterm Project - Used Board Game Site  -->
 
-<!DOC TYPE HTML> 
-<html> 
+<!DOCTYPE HTML> 
+<html ng-app="main"> 
 
 <head>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"> </script>
 
 <title> Used Board Games </title>
+
 </head>
 
-<body class="body">
+<script type="text/javascript" src="main.js"></script>
+<body ng-controller="mainController">
 
 <!-- Nav Bar  -->
 
@@ -25,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand brand" href="#">TITLE</a>
+      <a class="navbar-brand brand" href="#">  <span class="glyphicon glyphicon-knight" aria-hidden="true"></span> TITLE</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,6 +65,7 @@
 
 <div>
 <!-- Featured Content -->
+<h1> Check out these catagories of games! </h1>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-6 yellow">
@@ -77,7 +83,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-6 red"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups. </div>
-				<div class="col-lg-6 yellow"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups.</div>
+				<div class="col-lg-6 yellow"> HERES A TYPE OF BOARD GAME OMG YOU LUV BOARD GAMES PLAY ME </div>
 			</div>
 		</div>
 	</div>
@@ -89,21 +95,54 @@
 
 
 <!--  Thumbnail photos of games  -->
-
+<h1> Featured Games </h1>
 <div class= "container">
 
 	<div class="row">
-		<div class= "col-sm-2 red">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
 
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+		<div class= "col-md-4 thumbnails">
+				<h2>{{boardgames.name[i]}}</h2>
+     	 		<p><img src="scrabble.jpg"</p>
 
-		<div class= "col-sm-2 red ">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
 
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  View more Info &raquo;
+</button>
 
-		<div class= "col-sm-2 red ">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{boardGames.name}}</h4>
+      </div>
+      <div class="modal-body">
+       		<div>{{boardGames}}</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+		</div>
+
+		<div class= "col-md-4">
+				<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p>
+		</div>
+
+		<div class= "col-md-4">		
+			<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p></div>
+
+	
 
 	</div>
 </div>
@@ -112,17 +151,29 @@
 <div class= "container">
 
 	<div class="row">
-		<div class= "col-sm-2 thumbnails"><img src="scrabble.jpg"></div>
 
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+	<div class= "col-md-3">
+				<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p>
+		</div>
 
-		<div class= "col-sm-2 red ">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+		<div class= "col-md-3">
+				<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p>
+		</div>
 
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+		<div class= "col-md-3">		
+			<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p></div>
 
-		<div class= "col-sm-2 red ">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
-
-		<div class= "col-sm-2 yellow">Pork chop short ribs chicken sausage alcatra drumstick. Shoulder beef meatloaf ground round pork loin. Flank tenderloin chicken kielbasa, short ribs biltong t-bone meatball frankfurter shoulder pork loin. Pancetta pork ham hock short loin. Pork belly rump spare ribs meatball cupim chuck drumstick sausage biltong. Turducken boudin chuck shoulder turkey doner ham ham hock filet mignon kielbasa meatball pork belly short loin ball tip tenderloin.</div>
+		<div class= "col-md-3">
+					<h2>Heading</h2>
+     	 		<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View more info &raquo;</a></p>
+		</div>
 
 	</div>
 </div>
