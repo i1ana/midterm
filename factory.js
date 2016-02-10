@@ -166,3 +166,31 @@
 		</div>
 	</div>
 </div>
+
+// BODY 
+
+<!-- <div>
+<!-- Featured Content -->
+<h1> Check out these catagories of games! </h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 yellow">
+			Pie gummies fruitcake bear claw jelly beans. Marzipan gummi bears candy donut marshmallow toffee cake carrot cake tiramisu. Jelly beans biscuit carrot cake muffin sweet toffee chupa chups tootsie roll.
+			Croissant powder gingerbread chocolate cake tiramisu donut croissant donut jelly. Marzipan donut toffee lollipop pie cake. Lemon drops halvah powder gummies jelly beans. Oat cake jelly beans tart apple pie dessert.
+			Cotton candy chocolate cake ice cream lemon drops cotton candy powder tootsie roll. Donut dessert lollipop croissant sweet dragée. Biscuit sesame snaps jelly beans chocolate jelly caramels carrot cake. Soufflé bear claw muffin cupcake powder wafer.
+			Pudding fruitcake halvah lemon drops. Apple pie chocolate cake chocolate bar chocolate bar topping bear claw pastry lemon drops. Cupcake croissant toffee brownie soufflé danish candy canes donut wafer.
+			Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups.
+	</div>
+
+		<div class="col-lg-6 red">  
+			<div class="row">
+				<div class="col-lg-6 yellow"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups.</div>
+				<div class="col-lg-6 red">Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups. </div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 red"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups. </div>
+				<div class="col-lg-6 yellow"> HERES A TYPE OF BOARD GAME OMG YOU LUV BOARD GAMES PLAY ME </div>
+			</div>
+		</div>
+	</div>
+</div> -->

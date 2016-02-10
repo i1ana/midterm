@@ -5,11 +5,12 @@
 
 <head>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="main.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"> </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"> </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
 
 <title> Used Board Games </title>
 
@@ -19,6 +20,8 @@
 <body ng-controller="mainController">
 
 <!-- Nav Bar  -->
+
+
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -41,11 +44,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="powerGrid.html">Featured Strategy Game</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">Featured Party Game</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="arkhamHorror.html">Featured Coop Game</a></li>
           </ul>
         </li>
       </ul>
@@ -59,46 +62,92 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+
+
 <!-- Body of Site  -->
 
-<div>
-<!-- Featured Content -->
-<h1> Check out these catagories of games! </h1>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-6 yellow">
-			Pie gummies fruitcake bear claw jelly beans. Marzipan gummi bears candy donut marshmallow toffee cake carrot cake tiramisu. Jelly beans biscuit carrot cake muffin sweet toffee chupa chups tootsie roll.
-			Croissant powder gingerbread chocolate cake tiramisu donut croissant donut jelly. Marzipan donut toffee lollipop pie cake. Lemon drops halvah powder gummies jelly beans. Oat cake jelly beans tart apple pie dessert.
-			Cotton candy chocolate cake ice cream lemon drops cotton candy powder tootsie roll. Donut dessert lollipop croissant sweet dragée. Biscuit sesame snaps jelly beans chocolate jelly caramels carrot cake. Soufflé bear claw muffin cupcake powder wafer.
-			Pudding fruitcake halvah lemon drops. Apple pie chocolate cake chocolate bar chocolate bar topping bear claw pastry lemon drops. Cupcake croissant toffee brownie soufflé danish candy canes donut wafer.
-			Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups.
-	</div>
 
-		<div class="col-lg-6 red">  
-			<div class="row">
-				<div class="col-lg-6 yellow"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups.</div>
-				<div class="col-lg-6 red">Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups. </div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 red"> Bear claw cookie cake. Bear claw marzipan candy canes dragée bonbon danish powder. Gummi bears lollipop caramels tiramisu cupcake gingerbread macaroon cupcake chupa chups. </div>
-				<div class="col-lg-6 yellow"> HERES A TYPE OF BOARD GAME OMG YOU LUV BOARD GAMES PLAY ME </div>
-			</div>
-		</div>
-	</div>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="gray.jpg" alt="...">
+      <div class="carousel-caption">
+ 
+        <h1>Everyone Loves Playing Board Games!!  </h1>
+        <div><img class="gameImg" src="catBG.jpg"></div>
+        <p>Here are this week's featured board games. </p>
+		
+      </div>
+    </div>
+    <div class="item">
+      <img src="gray.jpg" alt="...">
+      <div class="carousel-caption">
+          <h1>Featured Strategy Game</h1>
+        <div><img class="gameImg" src="powerGrid.jpg"></div>
+        <p>Here are some words.</p>
+		<a class="btn btn-default" href="powerGrid.html" role="button">More Info</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="gray.jpg" alt="...">
+      <div class="carousel-caption">
+          <h1>Featured Party Game</h1>
+        <div><img class="gameImg" src="catBG.jpg"></div>
+        <p>Here are some words.</p>
+		<a class="btn btn-default" href="powerGrid.html" role="button">More Info</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gray.jpg" alt="...">
+      <div class="carousel-caption">
+            <h1>Featured Coop Game</h1>
+        <div><img class="gameImg" src="arkhamHorror.jpg"></div>
+        <p>Here are some words.</p>
+		<a class="btn btn-default" href="arkhamHorror.html" role="button">More Info</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 
 
-<p> </p>
-
-
 <!--  Thumbnail photos of games  -->
-<h1> Featured Games </h1>
-<div class= "container ">
+	<div class="container-fluid">
+		<div class="headers"><h1> Games to Purchase! </h1> </div> 
+	</div>
+	
+
+<div class= "container">
 
 	<div class="row">
 
-		<div class= "col-md-4" ng-repeat="game in boardGames">
+		<div class= "col-md-4 gameFacts" ng-repeat="game in boardGames">
+				<p class= "price" ng-binding>{{game.price | currency:"$ "}}</p>
 				<h2> {{game.name}} </h2>
      	 		<p><img class="thumbnail" ng-src={{game.img}}></p>
 
@@ -114,13 +163,15 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h2 class="modal-title">{{game.name}}</h2>
+				        	
+				        	<h2 class="modal-title">{{game.name}}</h2>
+				        	<div class="glyphicon glyphicon-shopping-cart shoppingCart" aria-hidden="true">{{cart}} </div>
 				      </div>
 				      <div class="modal-body">
 				       		<div><img class="thumbnail" ng-src={{game.img}}></div>
 				       		<div><span class="info">Type of Game: </span> {{game.type}}</div>
 				       		<div> <span class="info">Description: </span> {{game.description}}</div>
-				       		<div> <span class="info">Price: </span> {{game.price}}</div>
+				       		<div> <span class="info">Price: </span> {{game.price | currency:"$ " }}</div>
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -173,7 +224,7 @@
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@company.com</a></p>
+					<p><a href="mailto:support@company.com">Email Us</a></p>
 				</div>
 
 			</div>
@@ -186,12 +237,10 @@
 				</p>
 
 				<div class="footer-icons">
-
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
 					<a href="#"><i class="fa fa-github"></i></a>
-
 				</div>
 
 			</div>

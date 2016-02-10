@@ -29,7 +29,7 @@ $scope.boardGames =[
 		img: 'monopoly.jpg',
 		type: 'Family Game',
 		description: 'Players take the part of land owners, attempting to buy and then develop their land. Income is gained by other players visiting their properties and money is spent when they visit properties belonging to other players. When times get tough, players may have to mortgage their properties to raise cash for fines, taxes and other misfortunes.',
-		price: 6.50,
+		price: 6.99,
 	},
 	{
 		name: 'Cards Against Humanity',
@@ -88,8 +88,10 @@ console.log($scope.boardGames)
 	// $scope.search($scope.text)
 	// console.log($scope.text)
 
+
+
+
 	}])
 
- $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+
+
