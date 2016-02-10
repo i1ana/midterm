@@ -6,6 +6,7 @@ angular.module('main')
 
 		$scope.list=[]
 		$scope.text = 'hello'
+		$scope.cart = 0
 
 
 $scope.boardGames =[ 
@@ -64,6 +65,18 @@ console.log($scope.boardGames)
 
 	$scope.games($scope.boardGames)
 
+	$scope.count = function() {
+		$scope.cart = $scope.cart + 1
+		return $scope.cart
+	}
+
+	$scope.deCount = function() {
+		if($scope.cart > 0){
+			$scope.cart = $scope.cart - 1
+			return $scope.cart 
+		} 
+	}
+	
 
 	// $scope.search = function(){
 	// 	if ($scope.text) {
@@ -72,6 +85,11 @@ console.log($scope.boardGames)
 	// 	}
 	// }
 
+	// $scope.search($scope.text)
 	// console.log($scope.text)
 
 	}])
+
+ $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
