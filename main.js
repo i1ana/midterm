@@ -8,6 +8,7 @@ angular.module('main')
 		$scope.text = 'hello'
 		$scope.cart = 0
 		$scope.shoppingCart = []
+		$scope.total = 0
 
 
 $scope.boardGames =[ 
@@ -22,7 +23,7 @@ $scope.boardGames =[
 		name: 'Twilight Struggle',
 		img: 'twilightStruggle.jpg',
 		type: 'Strategy Game',
-		description: 'In 1945, unlikely allies toppled Hitler\'s war machine, while humanity\'s most devastating weapons forced the Japanese Empire to its knees in a storm of fire. Where once there stood many great powers, there then stood only two. The world had scant months to sigh its collective relief before a new conflict threatened. Unlike the titanic struggles of the preceding decades, this conflict would be waged not primarily by soldiers and tanks, but by spies and politicians, scientists and intellectuals, artists and traitors. Twilight Struggle is a two-player game simulating the forty-five year dance of intrigue, prestige, and occasional flares of warfare between the Soviet Union and the United States. The entire world is the stage on which these two titans fight to make the world safe for their own ideologies and ways of life. The game begins amidst the ruins of Europe as the two new "superpowers" scramble over the wreckage of the Second World War, and ends in 1989, when only the United States remained standing.', 
+		description: 'In 1945, unlikely allies toppled Hitler\'s war machine, while humanity\'s most devastating weapons forced the Japanese Empire to its knees in a storm of fire. Where once there stood many great powers, there then stood only two. The world had scant months to sigh its collective relief before a new conflict threatened. Unlike the titanic struggles of the preceding decades, this conflict would be waged not primarily by soldiers and tanks, but by spies and politicians, scientists and intellectuals, artists and traitors. Twilight Struggle is a two player game simulating the fortyfive year dance of intrigue, prestige, and occasional flares of warfare between the Soviet Union and the United States. The entire world is the stage on which these two titans fight to make the world safe for their own ideologies and ways of life. The game begins amidst the ruins of Europe as the two new "superpowers" scramble over the wreckage of the Second World War, and ends in 1989, when only the United States remained standing.', 
 		price: 25.99,
 	},
 	{
@@ -43,7 +44,7 @@ $scope.boardGames =[
 		name: 'The Settlers of Catan',
 		img: 'catan.jpg',
 		type: 'Strategy Game',
-		description: 'Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players collect these resources (cards)—wood, grain, brick, sheep, or stone—to build up their civilizations to get to 10 victory points and win the game.',
+		description: 'Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players collect these resources wood, grain, brick, sheep, or stone to build up their civilizations to get to 10 victory points and win the game.',
 		price: 30.99, 
 	},
 	{
@@ -53,7 +54,7 @@ $scope.boardGames =[
 		description: 'Two teams compete to see who can make contact with all of their agents first. Spymasters give one-word clues that can point to multiple words on the board. Their teammates try to guess words of the right color while avoiding those that belong to the opposing team. And everyone wants to avoid the assassin.',
 		price: 11.99,
 	}
-]
+	]
 console.log($scope.boardGames)
 
 
@@ -66,42 +67,28 @@ console.log($scope.boardGames)
 
 	$scope.games($scope.boardGames)
 
-	$scope.count = function() {
+	$scope.count = function(index,game) {
+		var price = game.price
+		console.log(price)
+
+		$scope.total += price
+
+		$scope.shoppingCart.push(game)
+		console.log($scope.shoppingCart)
 		$scope.cart = $scope.cart + 1
 		return $scope.cart
+
 	}
 
-	$scope.deCount = function() {
+	$scope.deCount = function(index,game) {
+		var dePrice = game.price
+		$scope.total -= dePrice
+		$scope.shoppingCart.splice(index, 1)
 		if($scope.cart > 0){
 			$scope.cart = $scope.cart - 1
 			return $scope.cart 
 		} 
 	}
-	
-
-	$scope.editCart = function(){
-			console.log("I'm working so far")
-			$scope.shoppingCart.push($scope.boardGames.name && $scope.boardGames.price)
-	}
-
-	$scope.editCart($scope.shoppingCart)
-
-
-
-
-
-
-	// $scope.search = function(){
-	// 	if ($scope.text) {
-	// 		$scope.list.push(this.text)
-	// 		$scope.text = ''
-	// 	}
-	// }
-
-	// $scope.search($scope.text)
-	// console.log($scope.text)
-
-
 
 
 	}])

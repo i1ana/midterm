@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+<link rel="shortcut icon" href="favicon.ico">
+
 
 <title> Used Board Games </title>
 
@@ -27,17 +29,17 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarHeader" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand title" href="#">  <span class="glyphicon glyphicon-knight" aria-hidden="true"></span> Adopt a Game</a>
+      <a class="navbar-brand title" href="main.html">  <span class="glyphicon glyphicon-knight" aria-hidden="true"></span> Adopt a Game</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="navbar-header">
+    <div class="collapse navbar-collapse navbar-right" id="navbarHeader">
       <ul class="nav navbar-nav">
         <li><a href="sell.html">Sell Your Games <span class="sr-only">(current)</span></a></li>
         <li><a href="aboot.html">About</a></li>
@@ -46,7 +48,7 @@
           <ul class="dropdown-menu">
             <li><a href="powerGrid.html">Featured Strategy Game</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Featured Party Game</a></li>
+            <li><a href="explodingKittens.html">Featured Party Game</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="arkhamHorror.html">Featured Coop Game</a></li>
           </ul>
@@ -71,18 +73,20 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Shopping Cart</h4>
+	        <h3 class="modal-title" id="myModalLabel">Shopping Cart</h3>
 	      </div>
 	      <div class="modal-body">
-	      		<div ng-repeat="items in shoppingCart">
-		   			<div> <span class="info">Name: </span> {{checkOut.name}}</div>
-					<div> <span class="info">Price: </span> {{checkOut.price | currency:"$ " }}</div>
+	      		<div ng-repeat="items in shoppingCart track by $index">
+	      		<div class="row">
+		   			<div class="col-lg-4"> <span class="info">Name: </span> {{items.name}}</div>
+					<div class="col-lg-4"> <span class="info">Price: </span> {{items.price | currency:"$ " }}</div>
+					<div class="col-lg-4"> <button type="button" class="btn-xs btn-primary" ng-click="count($index, items)"> + </button>
+					<button type="button" class="btn-xs btn-danger" ng-click="deCount($index, items)"> - </button> </div>
 				</div>
-
-				<button type="button" class="btn btn-primary" ng-click="count()">Add Another to Cart</button>
-				<button type="button" class="btn btn-danger" ng-click="deCount()">Remove from Cart</button>
 	      </div>
-	      <div class="modal-footer">
+	      <div class="modal-footer" >
+	      	<div><span class="info" ng-repeat="amount in total">Total: </span> {{total | currency: "$ "}}  </div>
+
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
@@ -122,7 +126,7 @@
       <img src="gray.jpg" alt="...">
       <div class="carousel-caption">
           <h1>Featured Strategy Game</h1>
-        <div><img class="gameImg" src="powerGrid.jpg"></div>
+        <div><a href="powerGrid.html"><img class="gameImg" src="powerGrid.jpg"></a></div>
         <p>Here are some words.</p>
 		<a class="btn btn-default" href="powerGrid.html" role="button">More Info</a>
       </div>
@@ -132,8 +136,8 @@
       <img src="gray.jpg" alt="...">
       <div class="carousel-caption">
           <h1>Featured Party Game</h1>
-        <div><img class="gameImg" src="explodingkittens.png"></div>
-        <p>Here are some words.</p>
+        <div><a href="explodingKittens.html"><img class="gameImg" src="explodingkittens.png"></a></div>
+        <p>"An explosively great time that will have you and your friends laughing, biting your nails, and screaming at each other until eventually there's a winner. "</p>
 		<a class="btn btn-default" href="explodingKittens.html" role="button">More Info</a>
       </div>
     </div>
@@ -141,8 +145,8 @@
       <img src="gray.jpg" alt="...">
       <div class="carousel-caption">
             <h1>Featured Co-op Game</h1>
-        <div><img class="gameImg" src="arkhamHorror.jpg"></div>
-        <p>Here are some words.</p>
+        <div><a href="arkhamHorror.html"><img class="gameImg" src="arkhamHorror.jpg"></a></div>
+        <p>"Arkham Horror is a board game designed with a relatively unique concept in mind. Instead of pitting players against one another to decide the winner, Arkham Horror pits all the players against itself (or the board) in epic 1920's style Lovecraftian horror setting."</p>
 		<a class="btn btn-default" href="arkhamHorror.html" role="button">More Info</a>
       </div>
 
@@ -172,7 +176,7 @@
 
 	<div class="row">
 
-		<div class= "col-md-4 gameFacts" ng-repeat="game in boardGames">
+		<div class= "col-md-4 gameFacts" ng-repeat="game in boardGames track by $index">
 				<p class= "price">{{game.price | currency:"$ "}}</p>
 				<h2> {{game.name}} </h2>
      	 		<p><img class="thumbnail" ng-src={{game.img}}></p>
@@ -201,8 +205,8 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary" ng-click="count()">Add to Cart</button>
-				        <button type="button" class="btn btn-danger" ng-click="deCount()">Remove from Cart</button>
+				        <button type="button" class="btn btn-primary" ng-click="count($index, game)">Add to Cart</button>
+				        <button type="button" class="btn btn-danger" ng-click="deCount($index, game)">Remove from Cart</button>
 				      </div>
 				    </div>
 				  </div>
