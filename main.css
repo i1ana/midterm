@@ -119,6 +119,11 @@ body {
 	display: inline-block;
 }
 
+/*MODAL*/
+.modal-body{
+	background-image: bg.jpg;
+} 
+
 /*FOOTER*/ 
 
 .footer-distributed{
@@ -256,14 +261,11 @@ body {
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #000000;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
@@ -289,4 +291,9 @@ body {
 		margin-left: 0;
 	}
 
+}
+
+.fa-icon{
+	height: 40px;
+	width: 40px;
 }

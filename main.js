@@ -7,6 +7,7 @@ angular.module('main')
 		$scope.list=[]
 		$scope.text = 'hello'
 		$scope.cart = 0
+		$scope.shoppingCart = []
 
 
 $scope.boardGames =[ 
@@ -77,6 +78,18 @@ console.log($scope.boardGames)
 		} 
 	}
 	
+
+	$scope.editCart = function(){
+			console.log("I'm working so far")
+			$scope.shoppingCart.push($scope.boardGames.name && $scope.boardGames.price)
+	}
+
+	$scope.editCart($scope.shoppingCart)
+
+
+
+
+
 
 	// $scope.search = function(){
 	// 	if ($scope.text) {
