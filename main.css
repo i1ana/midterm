@@ -7,26 +7,66 @@ body {
 }
 
 .headers{
+	color: #1e0f2d;
+	font-family: 'Gloria Hallelujah', cursive;
 	text-align: center; 
+	font-weight: bold;
 	padding: 15px;
+	width: 100%;
+	height: 100px;
 
+}
+
+
+/*Nav Bar*/
+
+.navbar{
+	height: 100px;
+	margin-bottom: 0;
+	padding-bottom: 10px; 
 }
 
 .navbar-default .navbar-brand {
-    color: #0D2C54;
+    color: #1e0f2d;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #0D2C54;
+    color: #1e0f2d;
 }
 
+.container-fluid {
+    padding-right: 40px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFF172;
+    color: #1e0f2d;
+}
+
+.title {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 36px; 
+	font-weight: bold; 
+	color: #1e0f2d;
+	padding-bottom: 10px; 
+	margin-top: -10px;
+}
+
+.glyphicon-knight{
+	color:  #663399;
+}
+
+.glyphicon-shopping-cart{
+	font-size: 20px;
+}
 
 /* Carousel base class */
 .carousel {
   height: 500px;
-  margin-bottom: 60px;
 }
-/* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
   z-index: 10;
 }
@@ -50,34 +90,17 @@ body {
 	border-radius: 15px;
 }
 
-.carousel h1 {
+.carousel-caption h1 {
+	font-family: 'Gloria Hallelujah', cursive;
 	font-weight: bold;
-	color: #0D2C54;
+	color: #1e0f2d;
 }
 
 .carousel p{
 	font-style: italic;
 }
 
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #FFF172;
-    color: #0D2C54;
-}
-
-.title {
-	font-size: 36px; 
-	font-weight: bold; 
-	color: #0D2C54;
-}
-
 .gameFacts{
-/*	border: solid 1px black;*/
-/*	padding: 25px;*/
 	padding-right: 40px;
 	padding-top: 15px;
 }
@@ -86,8 +109,14 @@ body {
 	font-weight: bold; 
 }
 
+.gameName{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 22px;
+	padding: inherit;	
+}
+
 .price{
-	background-color: #39D1B4;
+	background-color: #663399;
     color: #fff;
     font-size: 18px;
     border-radius: 50%;
@@ -98,27 +127,58 @@ body {
     text-align: center;
     width: 80px;
     position: absolute;
-    top: -40px;
-    right: 20px;
+    top: 80px;
+    right: 120px;
 }
 
 /* THUMBNAILS */
 
 .thumbnail{
-	height: 200px;
+	height: 225px;
 	width: 200px; 
-	border-radius: 30px;
-	padding: 30px;
+	border: none;
+	margin-bottom: 25px;
+	padding: 15px;
 }
 
 /*BUTTONS*/ 
 
-.btn-primary {
+.btn-main{
     color: #fff;
-    background-color: #39D1B4;
-    border-color: #39D1B4;
+    font-size: 15px; 
+    background-color: #663399;
+    padding: 6px 12px;
+    border-radius: 4px;
 }
 
+.btn-main:hover {
+    color: #fff;
+    background-color: #a384c1;
+}
+
+.btn-main:active {
+	color: #fff;
+    background-color: #663399 !important; 
+}
+
+.btn-default{
+	color: #fff;
+    font-size: 15px; 
+    background-color: #663399;
+}
+
+.btn-default:hover{
+	    color: #fff;
+    background-color: #a384c1;
+}
+.plus{
+	background-color: #663399;
+	color: #fff;
+}
+
+.plus:hover{
+	 background-color: #a384c1;
+}
 .shoppingCart{
 	display: inline-block;
 }
@@ -143,6 +203,10 @@ body {
 	margin-top: 15px;
 }
 
+.footer-distributed a:hover{
+	color: #663399;
+}
+
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right{
@@ -159,13 +223,15 @@ body {
 /* The company logo */
 
 .footer-distributed h3{
+	font-family: 'Gloria Hallelujah', cursive;
 	color: #00000;
 	font-size: 36px; 
 	margin: 0;
 }
 
 .footer-distributed h3 span{
-	color: #C51162;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #663399;
 }
 
 /* Footer links */
@@ -197,7 +263,7 @@ body {
 }
 
 .footer-distributed .footer-center i{
-	background-color:  #ffc107;
+	background-color:  #FFF172;
 	color: #000000;
 	font-size: 25px;
 	width: 38px;
@@ -229,7 +295,7 @@ body {
 }
 
 .footer-distributed .footer-center p a{
-	color:  #C51162;
+	color:  #1e0f2d;
 	text-decoration: none;;
 }
 
@@ -258,6 +324,7 @@ body {
 
 .footer-distributed .footer-icons{
 	margin-top: 25px;
+	color: #663399;
 }
 
 .footer-distributed .footer-icons a{
@@ -273,6 +340,7 @@ body {
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
+
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
@@ -300,4 +368,5 @@ body {
 .fa-icon{
 	height: 40px;
 	width: 40px;
+	color: #663399;
 }
